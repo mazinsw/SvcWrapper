@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Files>
+		<Folder Name="..">
+			<Folder Name="src">
+				<File Name="Descriptor.h"/>
+				<File Name="CppWindowsService.cpp"/>
+				<File Name="SampleService.cpp"/>
+				<File Name="SampleService.h"/>
+				<File Name="nsis_tchar.h"/>
+				<File Name="strings.h"/>
+				<File Name="utils.cpp"/>
+				<File Name="utils.h"/>
+				<File Name="ServiceInstaller.h"/>
+				<File Name="ServiceInstaller.cpp"/>
+				<File Name="ThreadPool.h"/>
+				<File Name="ServiceBase.h"/>
+				<File Name="ServiceBase.cpp"/>
+			</Folder>
+			<Folder Name="vendor">
+				<Folder Name="rapidxml">
+					<File Name="rapidxml_print.hpp"/>
+					<File Name="rapidxml_utils.hpp"/>
+					<File Name="rapidxml.hpp"/>
+					<File Name="rapidxml_iterators.hpp"/>
+				</Folder>
+			</Folder>
+		</Folder>
+	</Files>
+	<ConfigurationIndex Value="1"/>
+	<ConfigurationName Value="Win64"/>
+	<Libs Value="-m64 -std=c++11"/>
+	<Flags Value="-m64 -std=c++11 -DUNICODE -D_UNICODE -I..\vendor\rapidxml"/>
+	<Target Value="../bin/x64/SvcWrapper.exe"/>
+	<CommandLine Value="test"/>
+	<CompilerOptions Value="-Wall -s -O2"/>
+	<DeleteObjectsBefore Value="No"/>
+	<DeleteObjectsAfter Value="No"/>
+	<DeleteMakefileAfter Value="No"/>
+	<DeleteResourcesAfter Value="No"/>
+	<EnableTheme Value="No"/>
+	<RequiresAdmin Value="No"/>
+	<CompilerType Value="CPP"/>
+	<AppType Value="CONSOLE"/>
+	<Configurations>
+		<Configuration>
+			<ConfigurationName Value="Win32"/>
+			<Libs Value="-m32 -std=c++11"/>
+			<Flags Value="-m32 -std=c++11 -DUNICODE -D_UNICODE -I..\vendor\rapidxml"/>
+			<Target Value="../bin/x86/SvcWrapper.exe"/>
+			<CommandLine Value="test"/>
+			<CompilerOptions Value="-Wall -s -O2"/>
+			<DeleteObjectsBefore Value="No"/>
+			<DeleteObjectsAfter Value="No"/>
+			<DeleteMakefileAfter Value="No"/>
+			<DeleteResourcesAfter Value="No"/>
+			<EnableTheme Value="No"/>
+			<RequiresAdmin Value="No"/>
+			<CompilerType Value="CPP"/>
+			<AppType Value="CONSOLE"/>
+		</Configuration>
+	</Configurations>
+</Project>

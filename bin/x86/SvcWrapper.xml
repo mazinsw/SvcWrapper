@@ -1,0 +1,17 @@
+<service>
+  <id>PHP7.1</id>
+  <name>PHP7.1</name>
+  <description>PHP Fast-CGI Service</description>
+  <executable>php-cgi.exe</executable>
+  <workingdirectory>D:\Development\Interpreter\PHP-7.1</workingdirectory>
+  <env name="PHPRC" value="D:\Development\Interpreter\PHP-7.1" />
+  <env name="PHP_FCGI_MAX_REQUESTS" value="0" />
+  <logpath>D:\Development\Interpreter\PHP-7.1\logs</logpath>
+  <logmode>roll</logmode>
+  <startargument>-b</startargument>
+  <startargument>127.0.0.1:9123</startargument>
+  <startargument>-c</startargument>
+  <startargument>D:\Development\Interpreter\PHP-7.1\php.ini</startargument>
+  <stopexecutable>taskkill.exe</stopexecutable>
+  <stoparguments>/f /IM php-cgi.exe</stoparguments>
+</service>
